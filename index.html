@@ -1,973 +1,2478 @@
-<script>
-/* ============================================================
-   VICTORY ECHI — PORTFOLIO SITE
-   ============================================================ */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-const DATA = {
-  hero: {
-    name: "Victory Echi",
-    title: "Marketing & Brand Communications Strategist",
-    headline: "Marketing messages customers actually listen to.",
-    intro:
-      "I help founders, coaches, and growing brands turn unclear ideas into sharp messaging that makes the right people pay attention.",
-    cta1: "See the proof",
-    cta2: "Work with me",
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-    before:
-      "We help businesses leverage strategic solutions to achieve their goals.",
-    after:
-      "Turn your expertise into a message your best customers understand.",
-    caption: "Same offer. Clearer message."
-  },
+  <meta
+    name="description"
+    content="Victory Echi helps founders and coaches clarify their marketing message so customers will listen."
+  >
 
-  about: {
-    initials: "VE",
-    body: `
-      <p>
-        I’m Victory Echi, a marketing and brand communications strategist
-        focused on helping businesses communicate what they do clearly,
-        confidently, and persuasively.
-      </p>
+  <meta name="theme-color" content="#4C1D95">
 
-      <p>
-        Good marketing is not simply about saying more. It is about finding
-        the right message, for the right audience, at the right moment.
-      </p>
+  <title>Victory Echi | Marketing & Brand Communications Strategist</title>
 
-      <p>
-        My work sits at the intersection of <strong>strategy, messaging,
-        storytelling, and brand communication</strong>. I work with founders,
-        coaches, consultants, and businesses that have something valuable to
-        offer but need a clearer way to communicate that value.
-      </p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-      <h3>My approach</h3>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-      <p>
-        I start with the audience, the offer, and the problem the business
-        actually solves. From there, I simplify the message, strengthen the
-        positioning, and turn strategy into communication people can
-        understand and act on.
-      </p>
+  <style>
+    /* ============================================================
+       RESET
+    ============================================================ */
 
-      <blockquote>
-        Clarity is not about making a message smaller. It is about making the
-        important part impossible to miss.
-      </blockquote>
-    `
-  },
-
-  projects: [
-    {
-      id: "brand-positioning",
-      title: "Brand Positioning & Messaging",
-      client: "Founder-led service business",
-      category: "Strategy",
-      featured: true,
-      cover: "BP",
-      summary:
-        "Clarified the brand's positioning and transformed a broad service description into a focused customer-facing message.",
-      challenge:
-        "The business offered several valuable services, but the existing messaging made it difficult for potential customers to understand the primary value proposition.",
-      solution:
-        "I distilled the offer into a clear positioning statement, refined the core audience, and developed a messaging framework that could be reused across the website and marketing channels.",
-      result:
-        "A clearer communication system that made the offer easier to understand and gave the brand a consistent foundation for future marketing.",
-      tags: ["Positioning", "Messaging", "Strategy"]
-    },
-
-    {
-      id: "coach-messaging",
-      title: "Coach Offer Messaging",
-      client: "Personal development coach",
-      category: "Messaging",
-      featured: false,
-      cover: "CM",
-      summary:
-        "Reworked a coaching offer so prospective clients could immediately understand the problem, transformation, and value.",
-      challenge:
-        "The original copy focused heavily on the coach's process rather than the client's desired outcome.",
-      solution:
-        "Reframed the messaging around the client's problem, desired transformation, objections, and reasons to believe.",
-      result:
-        "A more customer-centred offer narrative that could be adapted for landing pages, social content, and sales conversations.",
-      tags: ["Copywriting", "Offer", "Storytelling"]
-    },
-
-    {
-      id: "campaign-copy",
-      title: "Campaign Copy Development",
-      client: "Digital campaign",
-      category: "Copywriting",
-      featured: false,
-      cover: "CC",
-      summary:
-        "Developed campaign messaging designed to move an audience from awareness to interest and action.",
-      challenge:
-        "The campaign had strong information but lacked a clear narrative connecting the audience's problem to the proposed solution.",
-      solution:
-        "Built a message sequence around attention, problem awareness, value, proof, objections, and action.",
-      result:
-        "A coherent campaign communication structure that could be used across multiple touchpoints.",
-      tags: ["Campaigns", "Copywriting", "Conversion"]
-    },
-
-    {
-      id: "content-strategy",
-      title: "Content Strategy Framework",
-      client: "Thought-leadership brand",
-      category: "Content",
-      featured: false,
-      cover: "CS",
-      summary:
-        "Created a practical content framework for turning expertise into consistent, useful brand communication.",
-      challenge:
-        "The brand had plenty of expertise but no repeatable system for deciding what to communicate.",
-      solution:
-        "Organised content around audience problems, core themes, proof, education, and brand perspective.",
-      result:
-        "A repeatable content structure that reduced guesswork and created stronger alignment between content and positioning.",
-      tags: ["Content", "Strategy", "Thought Leadership"]
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-  ],
 
-  posts: [
-    {
-      id: "clarity-in-marketing",
-      title: "Why clarity matters more than cleverness in marketing",
-      date: "October 2026",
-      type: "Article",
-      category: "Messaging",
-      excerpt:
-        "A clever message may sound impressive. A clear message helps people understand what you can actually do for them.",
-      body: `
-        <p>
-          One of the easiest mistakes in marketing is trying to sound
-          impressive before trying to sound clear.
-        </p>
-
-        <p>
-          Businesses often describe themselves using sophisticated language,
-          broad promises, and industry terminology. The result can sound
-          professional while leaving the audience unsure about what is being
-          offered.
-        </p>
-
-        <h3>Start with the problem</h3>
-
-        <p>
-          A stronger message usually begins with the audience's situation.
-          What problem are they experiencing? What are they trying to achieve?
-          What makes the problem important now?
-        </p>
-
-        <p>
-          Once those questions are clear, the offer has something meaningful
-          to connect to.
-        </p>
-
-        <h3>Make the value easy to recognise</h3>
-
-        <p>
-          Clarity does not mean removing personality. It means making sure
-          personality supports understanding rather than competing with it.
-        </p>
-
-        <blockquote>
-          If people have to decode your message before they can understand
-          your offer, your marketing is doing unnecessary work.
-        </blockquote>
-
-        <p>
-          The goal is simple: make the right person recognise the relevance of
-          your offer quickly.
-        </p>
-      `
-    },
-
-    {
-      id: "brand-story",
-      title: "Your brand story is not your biography",
-      date: "September 2026",
-      type: "Article",
-      category: "Brand",
-      excerpt:
-        "A useful brand story connects your experience to the reason your audience should care.",
-      body: `
-        <p>
-          Your experience matters, but your brand story should not require
-          customers to read your entire biography before understanding its
-          relevance.
-        </p>
-
-        <p>
-          The strongest brand stories create a connection between where you
-          have been, what you have learned, and how that experience helps the
-          people you serve.
-        </p>
-
-        <h3>Experience becomes valuable when it creates relevance</h3>
-
-        <p>
-          Instead of simply listing achievements, connect them to a problem
-          your audience recognises.
-        </p>
-
-        <p>
-          That shift changes the story from “Here is everything about me” to
-          “Here is why my experience matters to you.”
-        </p>
-      `
-    },
-
-    {
-      id: "better-content",
-      title: "A simple framework for better content",
-      date: "August 2026",
-      type: "Quick Take",
-      category: "Content",
-      excerpt:
-        "Before publishing another post, make sure you know what your audience should understand, feel, or do.",
-      body: `
-        <p>
-          Before creating content, identify one useful outcome for the reader.
-        </p>
-
-        <ul>
-          <li><strong>Understand:</strong> teach them something useful.</li>
-          <li><strong>Feel:</strong> create recognition or emotional relevance.</li>
-          <li><strong>Believe:</strong> strengthen a useful perspective.</li>
-          <li><strong>Do:</strong> give them a practical next step.</li>
-        </ul>
-
-        <p>
-          A content strategy becomes easier when every piece has a job.
-        </p>
-      `
+    html {
+      scroll-behavior: smooth;
     }
-  ],
 
-  skills: [
-    {
-      title: "Strategy",
-      items: [
-        "Brand Strategy",
-        "Positioning",
-        "Messaging Strategy",
-        "Audience Research",
-        "Campaign Strategy"
-      ]
-    },
-    {
-      title: "Communication",
-      items: [
-        "Brand Messaging",
-        "Copywriting",
-        "Storytelling",
-        "Content Strategy",
-        "Thought Leadership"
-      ]
-    },
-    {
-      title: "Content",
-      items: [
-        "Website Copy",
-        "Social Content",
-        "Long-form Writing",
-        "Campaign Copy",
-        "Editorial Planning"
-      ]
-    },
-    {
-      title: "Working Style",
-      items: [
-        "Research-led",
-        "Customer-focused",
-        "Collaborative",
-        "Strategic",
-        "Detail-oriented"
-      ]
+    body {
+      font-family: "Hanken Grotesk", sans-serif;
+      background: #ffffff;
+      color: #1F2937;
+      line-height: 1.7;
     }
-  ],
 
-  education: [
-    {
-      title: "Marketing & Brand Communications",
-      when: "Professional Development",
-      text:
-        "Continued development across marketing strategy, communication, branding, copywriting, and audience psychology."
-    },
-    {
-      title: "Communication & Writing",
-      when: "Ongoing Practice",
-      text:
-        "Developing practical expertise through research, writing, strategic projects, and analysis of effective brand communication."
-    },
-    {
-      title: "Independent Projects",
-      when: "Ongoing",
-      text:
-        "Applying marketing and communication principles through real-world projects, case studies, and portfolio work."
+    img {
+      max-width: 100%;
+      display: block;
     }
-  ],
 
-  contact: {
-    heading: "Let's talk",
-    text:
-      "Have an offer that is good but difficult to explain? Let's work on the message.",
-    links: [
-      {
-        label: "Email",
-        value: "victory@example.com",
-        href: "mailto:victory@example.com"
-      },
-      {
-        label: "LinkedIn",
-        value: "Connect professionally",
-        href: "https://www.linkedin.com/"
-      },
-      {
-        label: "Instagram",
-        value: "Follow the work",
-        href: "https://www.instagram.com/"
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ============================================================
+       VARIABLES
+    ============================================================ */
+
+    :root {
+      --deep: #4C1D95;
+      --vivid: #7C3AED;
+      --lav: #EDE9FE;
+      --lav-text: #DDD6FE;
+      --ink: #1F2937;
+      --grey: #E5E7EB;
+      --grey-soft: #F3F4F6;
+      --muted: #4B5563;
+      --white: #FFFFFF;
+
+      --display: "Bricolage Grotesque", sans-serif;
+      --body: "Hanken Grotesk", sans-serif;
+
+      --wrap: 1180px;
+      --radius: 18px;
+      --shadow: 0 14px 40px rgba(31, 41, 55, 0.08);
+    }
+
+    /* ============================================================
+       GLOBAL
+    ============================================================ */
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+      background: var(--white);
+      color: var(--deep);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--vivid);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+    }
+
+    .prose {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .prose p + p {
+      margin-top: 18px;
+    }
+
+    .quote {
+      margin-top: 28px;
+      padding: 24px;
+      border-left: 4px solid var(--vivid);
+      background: var(--lav);
+      color: var(--deep);
+      border-radius: 0 14px 14px 0;
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(76, 29, 149, 0.97);
+      backdrop-filter: blur(12px);
+      color: var(--white);
+    }
+
+    .header-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--lav-text);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav a {
+      font-size: 0.9rem;
+      color: #fff;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      opacity: 1;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: transparent;
+      color: white;
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+
+    .hero {
+      background: var(--deep);
+      color: var(--white);
+      padding: 100px 0 90px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(3rem, 7vw, 6.2rem);
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+      margin-bottom: 25px;
+    }
+
+    .hero-title {
+      color: var(--lav-text);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .hero-intro {
+      max-width: 650px;
+      color: #F5F3FF;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--deep);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      background: transparent;
+    }
+
+    .rewrite-card {
+      background: white;
+      color: var(--ink);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.18);
+    }
+
+    .rewrite-label {
+      color: var(--vivid);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .rewrite-before,
+    .rewrite-after {
+      padding: 18px;
+      border-radius: 12px;
+      font-size: 1rem;
+    }
+
+    .rewrite-before {
+      background: var(--grey-soft);
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .rewrite-after {
+      background: var(--lav);
+      color: var(--deep);
+      font-weight: 600;
+    }
+
+    .rewrite-arrow {
+      color: var(--vivid);
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 4px 0;
+    }
+
+    .rewrite-caption {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.65fr 1.35fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .portrait {
+      width: min(100%, 350px);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 28px;
+      background: var(--lav);
+      color: var(--deep);
+      font-family: var(--display);
+      font-size: 7rem;
+      font-weight: 700;
+      margin-inline: auto;
+    }
+
+    /* ============================================================
+       PROJECTS
+    ============================================================ */
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--grey);
+      background: white;
+      color: var(--muted);
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--deep);
+      border-color: var(--deep);
+      color: white;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      border: 1px solid var(--grey);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-cover {
+      min-height: 190px;
+      display: flex;
+      align-items: flex-end;
+      padding: 24px;
+      background: var(--lav);
+      color: var(--deep);
+      font-family: var(--display);
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-category {
+      color: var(--vivid);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-content h3 {
+      font-family: var(--display);
+      font-size: 1.55rem;
+      line-height: 1.15;
+      margin: 8px 0;
+    }
+
+    .project-client {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      background: var(--grey-soft);
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--deep);
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       BLOG
+    ============================================================ */
+
+    .blog-section {
+      background: var(--grey-soft);
+    }
+
+    .post-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .post-card {
+      display: grid;
+      grid-template-columns: 150px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 24px;
+      background: white;
+      border: 1px solid var(--grey);
+      border-radius: 14px;
+    }
+
+    .post-date {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .post-card h3 {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      line-height: 1.25;
+      margin-bottom: 5px;
+    }
+
+    .post-type {
+      color: var(--vivid);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .read-link {
+      color: var(--deep);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* ============================================================
+       SKILLS
+    ============================================================ */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .skill-group {
+      border-top: 3px solid var(--vivid);
+      padding-top: 18px;
+    }
+
+    .skill-group h3 {
+      font-family: var(--display);
+      margin-bottom: 15px;
+    }
+
+    .skill-group li {
+      color: var(--muted);
+      padding: 5px 0;
+    }
+
+    /* ============================================================
+       EDUCATION
+    ============================================================ */
+
+    .education-list {
+      max-width: 850px;
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 30px;
+      padding: 25px 0;
+      border-top: 1px solid var(--grey);
+    }
+
+    .education-item:last-child {
+      border-bottom: 1px solid var(--grey);
+    }
+
+    .education-period {
+      color: var(--vivid);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .education-item h3 {
+      font-family: var(--display);
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+    }
+
+    .education-item p {
+      color: var(--muted);
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+
+    .contact-section {
+      background: var(--deep);
+      color: white;
+    }
+
+    .contact-section .section-heading h2 {
+      color: white;
+    }
+
+    .contact-section .section-heading p {
+      color: var(--lav-text);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      padding: 12px 18px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .contact-link:hover {
+      background: white;
+      color: var(--deep);
+    }
+
+    /* ============================================================
+       DETAIL PAGE
+    ============================================================ */
+
+    #detail {
+      min-height: 70vh;
+    }
+
+    .detail-header {
+      background: var(--deep);
+      color: white;
+      padding: 90px 0;
+    }
+
+    .detail-header h1 {
+      max-width: 850px;
+      font-family: var(--display);
+      font-size: clamp(2.7rem, 6vw, 5.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .detail-meta {
+      margin-top: 20px;
+      color: var(--lav-text);
+    }
+
+    .detail-body {
+      max-width: 800px;
+      padding: 80px 0;
+    }
+
+    .detail-body h2 {
+      font-family: var(--display);
+      font-size: 2rem;
+      margin: 40px 0 15px;
+    }
+
+    .detail-body p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .detail-body ul {
+      list-style: disc;
+      margin: 15px 0 25px 22px;
+      color: var(--muted);
+    }
+
+    .back-link {
+      display: inline-flex;
+      margin-bottom: 35px;
+      color: var(--deep);
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+
+    .site-footer {
+      padding: 28px 0;
+      background: #24103F;
+      color: var(--lav-text);
+      font-size: 0.9rem;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
       }
-    ]
-  }
-};
 
+      .hero {
+        padding-top: 70px;
+      }
 
-/* ============================================================
-   HELPERS
-   ============================================================ */
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-const $ = (selector, parent = document) =>
-  parent.querySelector(selector);
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
 
-const $$ = (selector, parent = document) =>
-  [...parent.querySelectorAll(selector)];
+      .hero-grid {
+        gap: 45px;
+      }
+    }
 
-function escapeHTML(value) {
-  return String(value)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
+    @media (max-width: 700px) {
+      .wrap {
+        width: min(100% - 28px, 1180px);
+      }
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+      .section {
+        padding: 70px 0;
+      }
 
+      .nav-toggle {
+        display: block;
+      }
 
-/* ============================================================
-   HERO
-   ============================================================ */
+      .nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 74px;
+        background: var(--deep);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 16px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+      }
 
-function renderHero() {
-  $("#hero-name").textContent = DATA.hero.name;
-  $("#hero-title").textContent = DATA.hero.title;
-  $("#hero-headline").textContent = DATA.hero.headline;
-  $("#hero-intro").textContent = DATA.hero.intro;
+      .nav.open {
+        display: flex;
+      }
 
-  $("#hero-cta1").textContent = DATA.hero.cta1;
-  $("#hero-cta2").textContent = DATA.hero.cta2;
+      .post-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
 
-  $("#rw-before").textContent = DATA.hero.before;
-  $("#rw-after").textContent = DATA.hero.after;
-  $("#rw-caption").textContent = DATA.hero.caption;
-}
+      .education-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
 
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
 
-/* ============================================================
-   ABOUT
-   ============================================================ */
+      .hero h1 {
+        font-size: clamp(3rem, 16vw, 5rem);
+      }
 
-function renderAbout() {
-  $("#about-body").innerHTML = DATA.about.body;
+      .portrait {
+        max-width: 260px;
+        font-size: 5rem;
+      }
+    }
+  </style>
+</head>
 
-  $("#portrait").innerHTML = `
-    <div class="mono" aria-label="${escapeHTML(DATA.about.initials)}">
-      ${escapeHTML(DATA.about.initials)}
-    </div>
-  `;
-}
+<body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
 
-/* ============================================================
-   PROJECTS
-   ============================================================ */
+  <!-- ==========================================================
+       HEADER
+  =========================================================== -->
 
-let activeProjectFilter = "All";
+  <header class="site-header">
+    <div class="wrap header-inner">
 
-function projectCategories() {
-  return [
-    "All",
-    ...new Set(DATA.projects.map(project => project.category))
-  ];
-}
-
-function renderProjectFilters() {
-  const container = $("#project-filters");
-
-  container.innerHTML = projectCategories()
-    .map(category => `
-      <button
-        class="filter"
-        type="button"
-        data-project-filter="${escapeHTML(category)}"
-        aria-pressed="${category === activeProjectFilter}"
-      >
-        ${escapeHTML(category)}
-      </button>
-    `)
-    .join("");
-
-  $$("[data-project-filter]", container).forEach(button => {
-    button.addEventListener("click", () => {
-      activeProjectFilter = button.dataset.projectFilter;
-      renderProjectFilters();
-      renderProjects();
-    });
-  });
-}
-
-function renderProjects() {
-  const container = $("#project-grid");
-
-  let projects = DATA.projects;
-
-  if (activeProjectFilter !== "All") {
-    projects = projects.filter(
-      project => project.category === activeProjectFilter
-    );
-  }
-
-  if (!projects.length) {
-    container.innerHTML =
-      `<p class="empty">No projects found in this category.</p>`;
-    return;
-  }
-
-  container.innerHTML = projects
-    .map(project => `
-      <article class="pcard ${project.featured ? "is-featured" : ""}">
-        <div class="pcard-cover" aria-hidden="true">
-          <span class="cover-mark">${escapeHTML(project.cover)}</span>
-        </div>
-
-        <div class="pcard-body">
-          <p class="pcard-client">${escapeHTML(project.client)}</p>
-
-          <h3>
-            <a href="#project/${encodeURIComponent(project.id)}">
-              ${escapeHTML(project.title)}
-            </a>
-          </h3>
-
-          <p>${escapeHTML(project.summary)}</p>
-
-          <ul class="chips">
-            ${project.tags.map(tag => `
-              <li class="chip">${escapeHTML(tag)}</li>
-            `).join("")}
-          </ul>
-        </div>
-      </article>
-    `)
-    .join("");
-}
-
-
-/* ============================================================
-   BLOG
-   ============================================================ */
-
-let activePostFilter = "All";
-
-function postCategories() {
-  return [
-    "All",
-    ...new Set(DATA.posts.map(post => post.category))
-  ];
-}
-
-function renderPostFilters() {
-  const container = $("#post-filters");
-
-  container.innerHTML = postCategories()
-    .map(category => `
-      <button
-        class="filter"
-        type="button"
-        data-post-filter="${escapeHTML(category)}"
-        aria-pressed="${category === activePostFilter}"
-      >
-        ${escapeHTML(category)}
-      </button>
-    `)
-    .join("");
-
-  $$("[data-post-filter]", container).forEach(button => {
-    button.addEventListener("click", () => {
-      activePostFilter = button.dataset.postFilter;
-      renderPostFilters();
-      renderPosts();
-    });
-  });
-}
-
-function renderPosts() {
-  const container = $("#post-list");
-
-  let posts = DATA.posts;
-
-  if (activePostFilter !== "All") {
-    posts = posts.filter(
-      post => post.category === activePostFilter
-    );
-  }
-
-  if (!posts.length) {
-    container.innerHTML =
-      `<li class="post-row"><p class="empty">No posts found.</p></li>`;
-    return;
-  }
-
-  container.innerHTML = posts
-    .map(post => `
-      <li class="post-row">
-        <div class="post-meta">
-          <span>${escapeHTML(post.date)}</span>
-          <span class="badge ${post.type === "Article" ? "article" : ""}">
-            ${escapeHTML(post.type)}
-          </span>
-        </div>
-
-        <div>
-          <h3>
-            <a href="#post/${encodeURIComponent(post.id)}">
-              ${escapeHTML(post.title)}
-            </a>
-          </h3>
-
-          <p>${escapeHTML(post.excerpt)}</p>
-        </div>
-      </li>
-    `)
-    .join("");
-}
-
-
-/* ============================================================
-   SKILLS
-   ============================================================ */
-
-function renderSkills() {
-  $("#skill-groups").innerHTML = DATA.skills
-    .map(group => `
-      <div>
-        <h3>${escapeHTML(group.title)}</h3>
-
-        <ul>
-          ${group.items
-            .map(skill => `<li>${escapeHTML(skill)}</li>`)
-            .join("")}
-        </ul>
-      </div>
-    `)
-    .join("");
-}
-
-
-/* ============================================================
-   EDUCATION
-   ============================================================ */
-
-function renderEducation() {
-  $("#edu-list").innerHTML = DATA.education
-    .map(item => `
-      <li>
-        <h3>${escapeHTML(item.title)}</h3>
-        <p class="when">${escapeHTML(item.when)}</p>
-        <p>${escapeHTML(item.text)}</p>
-      </li>
-    `)
-    .join("");
-}
-
-
-/* ============================================================
-   CONTACT
-   ============================================================ */
-
-function renderContact() {
-  $("#contact-heading").textContent = DATA.contact.heading;
-  $("#contact-text").textContent = DATA.contact.text;
-
-  $("#contact-links").innerHTML = DATA.contact.links
-    .map(link => `
-      <a
-        class="contact-link"
-        href="${escapeHTML(link.href)}"
-        ${link.href.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}
-      >
-        <strong>${escapeHTML(link.label)}</strong>
-        <span>${escapeHTML(link.value)}</span>
+      <a class="brand" href="#home" aria-label="Victory Echi home">
+        Victory <span>Echi</span>
       </a>
-    `)
-    .join("");
-}
 
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+      <nav class="nav" id="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-function renderFooter() {
-  $("#footer-text").textContent =
-    `© ${new Date().getFullYear()} ${DATA.hero.name}. All rights reserved.`;
-}
+    </div>
+  </header>
 
+  <!-- ==========================================================
+       MAIN
+  =========================================================== -->
 
-/* ============================================================
-   REWRITE ANIMATION
-   ============================================================ */
+  <main id="main">
 
-function replayRewrite() {
-  const box = $(".rewrite");
+    <!-- HOME -->
 
-  box.classList.remove("armed", "go");
+    <div id="home">
 
-  /*
-   * Force the browser to recognise the reset before restarting
-   * the animation.
-   */
-  void box.offsetWidth;
+      <!-- HERO -->
 
-  box.classList.add("armed");
+      <section class="hero" id="hero">
+        <div class="wrap hero-grid">
 
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      box.classList.add("go");
-    });
-  });
-}
-
-function initRewrite() {
-  $("#rw-replay").addEventListener("click", replayRewrite);
-
-  /*
-   * Start once when the page loads.
-   */
-  setTimeout(replayRewrite, 400);
-}
-
-
-/* ============================================================
-   MOBILE NAVIGATION
-   ============================================================ */
-
-function initNavigation() {
-  const toggle = $(".nav-toggle");
-  const nav = $("#nav");
-
-  toggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("open");
-
-    toggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
-
-    toggle.textContent = isOpen ? "Close" : "Menu";
-  });
-
-  $$("#nav a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      toggle.textContent = "Menu";
-    });
-  });
-}
-
-
-/* ============================================================
-   DETAIL PAGE ROUTING
-   ============================================================ */
-
-function getRoute() {
-  const hash = window.location.hash.replace(/^#/, "");
-
-  if (!hash) {
-    return {
-      type: "home",
-      id: null
-    };
-  }
-
-  const [type, ...rest] = hash.split("/");
-
-  return {
-    type,
-    id: decodeURIComponent(rest.join("/"))
-  };
-}
-
-function findProject(id) {
-  return DATA.projects.find(project => project.id === id);
-}
-
-function findPost(id) {
-  return DATA.posts.find(post => post.id === id);
-}
-
-
-/* ============================================================
-   DETAIL VIEWS
-   ============================================================ */
-
-function renderProjectDetail(project) {
-  $("#detail").innerHTML = `
-    <main class="detail">
-      <div class="wrap">
-
-        <a class="back" href="#projects">
-          ← Back to projects
-        </a>
-
-        <div class="post-head">
-          <p class="post-meta">
-            <span>${escapeHTML(project.client)}</span>
-            <span class="badge">${escapeHTML(project.category)}</span>
-          </p>
-
-          <h1>${escapeHTML(project.title)}</h1>
-
-          <p class="detail-summary">
-            ${escapeHTML(project.summary)}
-          </p>
-        </div>
-
-        <figure class="detail-cover">
-          <div class="pcard-cover" style="
-            aspect-ratio:16/8;
-            border:2px solid var(--ink);
-            border-radius:22px;
-          ">
-            <span class="cover-mark">
-              ${escapeHTML(project.cover)}
+          <div>
+            <span class="eyebrow" style="color:#DDD6FE;">
+              Marketing & Brand Communications
             </span>
+
+            <h1 id="hero-name">Victory Echi</h1>
+
+            <p class="hero-title" id="hero-title">
+              Marketing & Brand Communications Strategist
+            </p>
+
+            <p class="hero-intro" id="hero-intro">
+              I help founders, coaches, and growing brands turn unclear ideas
+              into sharp messaging that makes the right people pay attention.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="hero-cta-primary" href="#projects">
+                See the proof
+              </a>
+
+              <a class="btn btn-secondary" id="hero-cta-secondary" href="#contact">
+                Work with me
+              </a>
+            </div>
           </div>
-        </figure>
 
-        <section class="d-section">
-          <h2>The challenge</h2>
-          <p>${escapeHTML(project.challenge)}</p>
-        </section>
+          <div class="rewrite-card" aria-label="Marketing message rewrite example">
 
-        <section class="d-section">
-          <h2>The approach</h2>
-          <p>${escapeHTML(project.solution)}</p>
-        </section>
+            <div class="rewrite-label">Message rewrite</div>
 
-        <section class="d-section">
-          <h2>Outcome</h2>
-          <p>${escapeHTML(project.result)}</p>
-        </section>
+            <div class="rewrite-before" id="rewrite-before">
+              We help businesses leverage strategic solutions to achieve their goals.
+            </div>
 
-        <div class="detail-cta">
-          <h2>Have a messaging challenge?</h2>
+            <div class="rewrite-arrow">↓</div>
+
+            <div class="rewrite-after" id="rewrite-after">
+              Turn your expertise into a message your best customers understand.
+            </div>
+
+            <p class="rewrite-caption" id="rewrite-caption">
+              Same offer. Clearer message.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section class="section" id="about">
+        <div class="wrap">
+
+          <div class="section-heading">
+            <span class="eyebrow">About</span>
+            <h2>Clear thinking. Stronger communication.</h2>
+          </div>
+
+          <div class="about-grid">
+
+            <div
+              class="portrait"
+              id="portrait"
+              aria-label="Victory Echi initials"
+            >
+              VE
+            </div>
+
+            <div class="prose" id="about-body">
+              <p>
+                I work at the intersection of marketing strategy, brand
+                communication, and clear writing. My focus is helping
+                businesses communicate what they do in a way that is simple,
+                relevant, and persuasive.
+              </p>
+
+              <p>
+                Good marketing does not need to sound complicated. It needs to
+                make the right person understand why an offer matters and what
+                they should do next.
+              </p>
+
+              <div class="quote">
+                Clarity is not about saying less. It is about making every
+                important word work harder.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+
+      <section class="section" id="projects">
+        <div class="wrap">
+
+          <div class="section-heading">
+            <span class="eyebrow">Selected Work</span>
+            <h2>Projects built around the message.</h2>
+            <p>
+              A selection of strategy, messaging, copywriting, and content
+              work.
+            </p>
+          </div>
+
+          <div
+            class="filters"
+            id="project-filters"
+            aria-label="Project filters"
+          ></div>
+
+          <div
+            class="project-grid"
+            id="project-grid"
+          ></div>
+
+        </div>
+      </section>
+
+      <!-- BLOG -->
+
+      <section class="section blog-section" id="blog">
+        <div class="wrap">
+
+          <div class="section-heading">
+            <span class="eyebrow">Writing</span>
+            <h2>Ideas about marketing and communication.</h2>
+            <p>
+              Short essays and practical thoughts on making brands clearer
+              and more useful.
+            </p>
+          </div>
+
+          <div
+            class="filters"
+            id="post-filters"
+            aria-label="Blog filters"
+          ></div>
+
+          <div
+            class="post-list"
+            id="post-list"
+          ></div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+
+      <section class="section" id="skills">
+        <div class="wrap">
+
+          <div class="section-heading">
+            <span class="eyebrow">Capabilities</span>
+            <h2>What I bring to the work.</h2>
+          </div>
+
+          <div
+            class="skills-grid"
+            id="skill-groups"
+          ></div>
+
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+
+      <section class="section" id="education">
+        <div class="wrap">
+
+          <div class="section-heading">
+            <span class="eyebrow">Education & Development</span>
+            <h2>Always sharpening the craft.</h2>
+          </div>
+
+          <div
+            class="education-list"
+            id="edu-list"
+          ></div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+
+      <section class="section contact-section" id="contact">
+        <div class="wrap">
+
+          <div class="section-heading">
+            <span class="eyebrow" style="color:#DDD6FE;">
+              Contact
+            </span>
+
+            <h2 id="contact-heading">
+              Have a message that needs work?
+            </h2>
+
+            <p id="contact-text">
+              If your offer is strong but your communication is not doing it
+              justice, let's talk.
+            </p>
+          </div>
+
+          <div
+            class="contact-links"
+            id="contact-links"
+          ></div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========================================================
+         DETAIL VIEW
+    ========================================================= -->
+
+    <section id="detail" hidden></section>
+
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+  =========================================================== -->
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p id="footer-text">
+        © 2026 Victory Echi. Marketing & Brand Communications.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================
+       JAVASCRIPT
+  =========================================================== -->
+
+  <script>
+    "use strict";
+
+    /* ============================================================
+       DATA
+    ============================================================ */
+
+    const DATA = {
+
+      hero: {
+        name: "Victory Echi",
+
+        title: "Marketing & Brand Communications Strategist",
+
+        headline: "Marketing messages customers actually listen to.",
+
+        intro:
+          "I help founders, coaches, and growing brands turn unclear ideas into sharp messaging that makes the right people pay attention.",
+
+        ctaPrimary: "See the proof",
+
+        ctaSecondary: "Work with me",
+
+        before:
+          "We help businesses leverage strategic solutions to achieve their goals.",
+
+        after:
+          "Turn your expertise into a message your best customers understand.",
+
+        caption:
+          "Same offer. Clearer message."
+      },
+
+      about: {
+        initials: "VE",
+
+        body: `
           <p>
-            Let's discuss the offer, audience, and message you want to
-            strengthen.
+            I work at the intersection of marketing strategy, brand
+            communication, and clear writing. My focus is helping businesses
+            communicate what they do in a way that is simple, relevant,
+            and persuasive.
           </p>
-          <a class="btn btn-grey" href="#contact">
-            Start a conversation
+
+          <p>
+            Good marketing does not need to sound complicated. It needs to
+            make the right person understand why an offer matters and what
+            they should do next.
+          </p>
+
+          <div class="quote">
+            Clarity is not about saying less. It is about making every
+            important word work harder.
+          </div>
+        `
+      },
+
+      projects: [
+
+        {
+          id: "brand-positioning",
+
+          title: "Brand Positioning & Messaging",
+
+          client: "Founder-led service business",
+
+          category: "Strategy",
+
+          featured: true,
+
+          cover: "BP",
+
+          tags: [
+            "Positioning",
+            "Messaging",
+            "Strategy"
+          ],
+
+          summary:
+            "A positioning and messaging framework designed to make a service business easier to understand and remember.",
+
+          problem:
+            "The business had a valuable offer but its communication was too broad, making it difficult for potential customers to immediately understand the value.",
+
+          approach:
+            "Clarified the audience, value proposition, core message, supporting proof points, and communication direction.",
+
+          outcome:
+            "Created a clearer foundation for website copy, sales conversations, social content, and future campaigns."
+        },
+
+        {
+          id: "coach-messaging",
+
+          title: "Coach Offer Messaging",
+
+          client: "Personal development coach",
+
+          category: "Messaging",
+
+          featured: false,
+
+          cover: "CM",
+
+          tags: [
+            "Copywriting",
+            "Offer",
+            "Storytelling"
+          ],
+
+          summary:
+            "Messaging development for a coaching offer that needed to communicate its transformation more clearly.",
+
+          problem:
+            "The offer described several features but did not clearly communicate the transformation a prospective client could expect.",
+
+          approach:
+            "Reframed the offer around the audience's problem, desired outcome, objections, and reasons to believe.",
+
+          outcome:
+            "Produced a clearer offer narrative that could be adapted across a landing page, social content, and direct conversations."
+        },
+
+        {
+          id: "campaign-copy",
+
+          title: "Campaign Copy Development",
+
+          client: "Digital campaign",
+
+          category: "Copywriting",
+
+          featured: false,
+
+          cover: "CC",
+
+          tags: [
+            "Campaigns",
+            "Copywriting",
+            "Conversion"
+          ],
+
+          summary:
+            "Campaign messaging designed to connect an audience problem with a clear offer and action.",
+
+          problem:
+            "The campaign needed concise messaging that could attract attention while maintaining a consistent brand voice.",
+
+          approach:
+            "Developed campaign angles, headlines, supporting copy, calls to action, and message variations.",
+
+          outcome:
+            "Created a flexible copy system that could be adapted across multiple campaign assets."
+        },
+
+        {
+          id: "content-strategy",
+
+          title: "Content Strategy Framework",
+
+          client: "Thought-leadership brand",
+
+          category: "Content",
+
+          featured: false,
+
+          cover: "CS",
+
+          tags: [
+            "Content",
+            "Strategy",
+            "Thought Leadership"
+          ],
+
+          summary:
+            "A practical content framework for turning expertise into consistent and useful communication.",
+
+          problem:
+            "The brand had plenty of knowledge but lacked a repeatable system for deciding what to publish.",
+
+          approach:
+            "Organised content around audience problems, expertise areas, perspectives, proof, and practical education.",
+
+          outcome:
+            "Established a repeatable structure for generating relevant content without relying on random posting."
+        }
+
+      ],
+
+      posts: [
+
+        {
+          id: "clarity-in-marketing",
+
+          title: "Why clarity matters more than cleverness in marketing",
+
+          date: "October 2026",
+
+          type: "Article",
+
+          category: "Messaging",
+
+          excerpt:
+            "A message can be creative and still fail if the audience cannot quickly understand what it means.",
+
+          body: `
+            <p>
+              Marketing communication is often rewarded for sounding
+              impressive. But the first job of a message is not to impress.
+              It is to communicate.
+            </p>
+
+            <h2>Clarity creates momentum</h2>
+
+            <p>
+              When people understand an offer quickly, they have less mental
+              work to do. That makes it easier for them to decide whether the
+              offer is relevant to them.
+            </p>
+
+            <h2>Start with the audience</h2>
+
+            <p>
+              Strong messaging begins with understanding what the audience
+              already knows, what they want, what they are struggling with,
+              and what they need to believe before taking action.
+            </p>
+
+            <p>
+              Clever language can support a clear idea. It should not replace
+              one.
+            </p>
+          `
+        },
+
+        {
+          id: "brand-story",
+
+          title: "Your brand story is not your biography",
+
+          date: "September 2026",
+
+          type: "Article",
+
+          category: "Brand",
+
+          excerpt:
+            "A useful brand story connects your experience to something meaningful for the audience.",
+
+          body: `
+            <p>
+              Your experience matters, but a brand story becomes more useful
+              when it explains why that experience matters to the people you
+              serve.
+            </p>
+
+            <h2>Move from history to relevance</h2>
+
+            <p>
+              Instead of simply listing everything that happened, identify
+              the experiences that explain what you believe, what you do
+              differently, and why your audience should care.
+            </p>
+
+            <h2>The audience still matters</h2>
+
+            <p>
+              Even personal brand storytelling should help the reader
+              understand something about themselves, their problem, or the
+              transformation you can help create.
+            </p>
+          `
+        },
+
+        {
+          id: "better-content",
+
+          title: "A simple framework for better content",
+
+          date: "August 2026",
+
+          type: "Quick Take",
+
+          category: "Content",
+
+          excerpt:
+            "A simple structure can make content easier to plan, write, and improve.",
+
+          body: `
+            <p>
+              A practical content system can start with three questions:
+              What does my audience need to understand? What do I believe
+              about it? What useful action can they take?
+            </p>
+
+            <h2>Teach</h2>
+
+            <p>
+              Give the audience something useful they can understand or apply.
+            </p>
+
+            <h2>Think</h2>
+
+            <p>
+              Share a perspective that demonstrates how you approach the
+              subject.
+            </p>
+
+            <h2>Act</h2>
+
+            <p>
+              Give the reader a practical next step.
+            </p>
+          `
+        }
+
+      ],
+
+      skills: [
+
+        {
+          title: "Strategy",
+
+          items: [
+            "Brand positioning",
+            "Marketing strategy",
+            "Audience research",
+            "Message development",
+            "Offer positioning"
+          ]
+        },
+
+        {
+          title: "Communication",
+
+          items: [
+            "Brand messaging",
+            "Copywriting",
+            "Storytelling",
+            "Editing",
+            "Persuasive communication"
+          ]
+        },
+
+        {
+          title: "Content",
+
+          items: [
+            "Content strategy",
+            "Thought leadership",
+            "Campaign content",
+            "Social content",
+            "Content planning"
+          ]
+        },
+
+        {
+          title: "Working Style",
+
+          items: [
+            "Clear thinking",
+            "Research",
+            "Collaboration",
+            "Attention to detail",
+            "Continuous learning"
+          ]
+        }
+
+      ],
+
+      education: [
+
+        {
+          period: "Professional Development",
+
+          title: "Marketing & Brand Communications",
+
+          description:
+            "Ongoing development in marketing strategy, positioning, brand communication, messaging, and copywriting."
+        },
+
+        {
+          period: "Ongoing Practice",
+
+          title: "Communication & Writing",
+
+          description:
+            "Continuous practice in clear writing, persuasive communication, storytelling, editing, and content development."
+        },
+
+        {
+          period: "Ongoing",
+
+          title: "Independent Projects",
+
+          description:
+            "Practical project work used to develop strategic thinking, communication skills, and a growing portfolio."
+        }
+
+      ],
+
+      contact: {
+
+        heading:
+          "Have a message that needs work?",
+
+        text:
+          "If your offer is strong but your communication is not doing it justice, let's talk.",
+
+        email:
+          "victory@example.com",
+
+        linkedin:
+          "https://www.linkedin.com/",
+
+        instagram:
+          "https://www.instagram.com/"
+      }
+
+    };
+
+
+    /* ============================================================
+       HELPERS
+    ============================================================ */
+
+    function $(selector) {
+      return document.querySelector(selector);
+    }
+
+    function $$(selector) {
+      return Array.from(document.querySelectorAll(selector));
+    }
+
+    function escapeHTML(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+
+    function renderHero() {
+
+      const heroName = $("#hero-name");
+      const heroTitle = $("#hero-title");
+      const heroIntro = $("#hero-intro");
+
+      const primary = $("#hero-cta-primary");
+      const secondary = $("#hero-cta-secondary");
+
+      const before = $("#rewrite-before");
+      const after = $("#rewrite-after");
+      const caption = $("#rewrite-caption");
+
+      if (heroName) {
+        heroName.textContent = DATA.hero.name;
+      }
+
+      if (heroTitle) {
+        heroTitle.textContent = DATA.hero.title;
+      }
+
+      if (heroIntro) {
+        heroIntro.textContent = DATA.hero.intro;
+      }
+
+      if (primary) {
+        primary.textContent = DATA.hero.ctaPrimary;
+        primary.href = "#projects";
+      }
+
+      if (secondary) {
+        secondary.textContent = DATA.hero.ctaSecondary;
+        secondary.href = "#contact";
+      }
+
+      if (before) {
+        before.textContent = DATA.hero.before;
+      }
+
+      if (after) {
+        after.textContent = DATA.hero.after;
+      }
+
+      if (caption) {
+        caption.textContent = DATA.hero.caption;
+      }
+    }
+
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+
+    function renderAbout() {
+
+      const portrait = $("#portrait");
+      const body = $("#about-body");
+
+      if (portrait) {
+        portrait.textContent = DATA.about.initials;
+      }
+
+      if (body) {
+        body.innerHTML = DATA.about.body;
+      }
+    }
+
+
+    /* ============================================================
+       PROJECT FILTERS
+    ============================================================ */
+
+    let activeProjectFilter = "All";
+
+    function getProjectCategories() {
+
+      const categories = DATA.projects
+        .map(project => project.category)
+        .filter(Boolean);
+
+      return ["All", ...new Set(categories)];
+    }
+
+    function renderProjectFilters() {
+
+      const container = $("#project-filters");
+
+      if (!container) return;
+
+      container.innerHTML = getProjectCategories()
+        .map(category => `
+          <button
+            type="button"
+            class="filter-btn ${category === activeProjectFilter ? "active" : ""}"
+            data-project-filter="${escapeHTML(category)}"
+            aria-pressed="${category === activeProjectFilter}"
+          >
+            ${escapeHTML(category)}
+          </button>
+        `)
+        .join("");
+
+      $$("#project-filters .filter-btn").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          activeProjectFilter =
+            button.dataset.projectFilter;
+
+          renderProjectFilters();
+          renderProjects();
+
+        });
+
+      });
+    }
+
+
+    /* ============================================================
+       PROJECTS
+    ============================================================ */
+
+    function renderProjects() {
+
+      const grid = $("#project-grid");
+
+      if (!grid) return;
+
+      const filtered =
+        activeProjectFilter === "All"
+          ? DATA.projects
+          : DATA.projects.filter(
+              project =>
+                project.category === activeProjectFilter
+            );
+
+      grid.innerHTML = filtered
+        .map(project => `
+          <article class="project-card">
+
+            <div class="project-cover">
+              ${escapeHTML(project.cover)}
+            </div>
+
+            <div class="project-content">
+
+              <div class="project-category">
+                ${escapeHTML(project.category)}
+              </div>
+
+              <h3>
+                ${escapeHTML(project.title)}
+              </h3>
+
+              <p class="project-client">
+                ${escapeHTML(project.client)}
+              </p>
+
+              <div class="tag-list">
+                ${project.tags
+                  .map(tag => `
+                    <span class="tag">
+                      ${escapeHTML(tag)}
+                    </span>
+                  `)
+                  .join("")
+                }
+              </div>
+
+              <a
+                class="project-link"
+                href="#project/${encodeURIComponent(project.id)}"
+              >
+                View project →
+              </a>
+
+            </div>
+
+          </article>
+        `)
+        .join("");
+
+      if (!filtered.length) {
+
+        grid.innerHTML = `
+          <p class="prose">
+            No projects found in this category.
+          </p>
+        `;
+      }
+    }
+
+
+    /* ============================================================
+       BLOG FILTERS
+    ============================================================ */
+
+    let activePostFilter = "All";
+
+    function getPostCategories() {
+
+      const categories = DATA.posts
+        .map(post => post.category)
+        .filter(Boolean);
+
+      return ["All", ...new Set(categories)];
+    }
+
+    function renderPostFilters() {
+
+      const container = $("#post-filters");
+
+      if (!container) return;
+
+      container.innerHTML = getPostCategories()
+        .map(category => `
+          <button
+            type="button"
+            class="filter-btn ${category === activePostFilter ? "active" : ""}"
+            data-post-filter="${escapeHTML(category)}"
+            aria-pressed="${category === activePostFilter}"
+          >
+            ${escapeHTML(category)}
+          </button>
+        `)
+        .join("");
+
+      $$("#post-filters .filter-btn").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          activePostFilter =
+            button.dataset.postFilter;
+
+          renderPostFilters();
+          renderPosts();
+
+        });
+
+      });
+    }
+
+
+    /* ============================================================
+       BLOG POSTS
+    ============================================================ */
+
+    function renderPosts() {
+
+      const container = $("#post-list");
+
+      if (!container) return;
+
+      const filtered =
+        activePostFilter === "All"
+          ? DATA.posts
+          : DATA.posts.filter(
+              post =>
+                post.category === activePostFilter
+            );
+
+      container.innerHTML = filtered
+        .map(post => `
+          <article class="post-card">
+
+            <div class="post-date">
+              ${escapeHTML(post.date)}
+            </div>
+
+            <div>
+
+              <div class="post-type">
+                ${escapeHTML(post.type)}
+              </div>
+
+              <h3>
+                ${escapeHTML(post.title)}
+              </h3>
+
+              <p class="project-client">
+                ${escapeHTML(post.excerpt)}
+              </p>
+
+            </div>
+
+            <a
+              class="read-link"
+              href="#post/${encodeURIComponent(post.id)}"
+            >
+              Read →
+            </a>
+
+          </article>
+        `)
+        .join("");
+
+      if (!filtered.length) {
+
+        container.innerHTML = `
+          <p class="prose">
+            No posts found in this category.
+          </p>
+        `;
+      }
+    }
+
+
+    /* ============================================================
+       SKILLS
+    ============================================================ */
+
+    function renderSkills() {
+
+      const container = $("#skill-groups");
+
+      if (!container) return;
+
+      container.innerHTML = DATA.skills
+        .map(group => `
+          <div class="skill-group">
+
+            <h3>
+              ${escapeHTML(group.title)}
+            </h3>
+
+            <ul>
+              ${group.items
+                .map(item => `
+                  <li>
+                    ${escapeHTML(item)}
+                  </li>
+                `)
+                .join("")
+              }
+            </ul>
+
+          </div>
+        `)
+        .join("");
+    }
+
+
+    /* ============================================================
+       EDUCATION
+    ============================================================ */
+
+    function renderEducation() {
+
+      const container = $("#edu-list");
+
+      if (!container) return;
+
+      container.innerHTML = DATA.education
+        .map(item => `
+          <article class="education-item">
+
+            <div class="education-period">
+              ${escapeHTML(item.period)}
+            </div>
+
+            <div>
+
+              <h3>
+                ${escapeHTML(item.title)}
+              </h3>
+
+              <p>
+                ${escapeHTML(item.description)}
+              </p>
+
+            </div>
+
+          </article>
+        `)
+        .join("");
+    }
+
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+
+    function renderContact() {
+
+      const heading = $("#contact-heading");
+      const text = $("#contact-text");
+      const links = $("#contact-links");
+
+      if (heading) {
+        heading.textContent = DATA.contact.heading;
+      }
+
+      if (text) {
+        text.textContent = DATA.contact.text;
+      }
+
+      if (links) {
+
+        links.innerHTML = `
+
+          <a
+            class="contact-link"
+            href="mailto:${escapeHTML(DATA.contact.email)}"
+          >
+            Email
           </a>
+
+          <a
+            class="contact-link"
+            href="${escapeHTML(DATA.contact.linkedin)}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            class="contact-link"
+            href="${escapeHTML(DATA.contact.instagram)}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+        `;
+      }
+    }
+
+
+    /* ============================================================
+       REWRITE ANIMATION
+    ============================================================ */
+
+    function replayRewrite() {
+
+      const after = $("#rewrite-after");
+
+      if (!after) return;
+
+      after.animate(
+        [
+          {
+            opacity: 0.25,
+            transform: "translateY(8px)"
+          },
+          {
+            opacity: 1,
+            transform: "translateY(0)"
+          }
+        ],
+        {
+          duration: 650,
+          easing: "ease-out"
+        }
+      );
+    }
+
+    function initRewrite() {
+
+      const card = $(".rewrite-card");
+
+      if (!card) return;
+
+      card.addEventListener("mouseenter", replayRewrite);
+    }
+
+
+    /* ============================================================
+       MOBILE NAVIGATION
+    ============================================================ */
+
+    function initNavigation() {
+
+      const toggle = $("#nav-toggle");
+      const nav = $("#site-nav");
+
+      if (!toggle || !nav) return;
+
+      toggle.addEventListener("click", () => {
+
+        const isOpen =
+          nav.classList.toggle("open");
+
+        toggle.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+      });
+
+      $$("#site-nav a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          nav.classList.remove("open");
+
+          toggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+    }
+
+
+    /* ============================================================
+       ROUTING
+    ============================================================ */
+
+    function getRoute() {
+
+      const hash =
+        window.location.hash.replace(/^#/, "");
+
+      if (!hash || hash === "home") {
+        return {
+          type: "home"
+        };
+      }
+
+      const parts = hash.split("/");
+
+      if (parts[0] === "project" && parts[1]) {
+
+        return {
+          type: "project",
+          id: decodeURIComponent(parts.slice(1).join("/"))
+        };
+      }
+
+      if (parts[0] === "post" && parts[1]) {
+
+        return {
+          type: "post",
+          id: decodeURIComponent(parts.slice(1).join("/"))
+        };
+      }
+
+      return {
+        type: "not-found"
+      };
+    }
+
+
+    function findProject(id) {
+
+      return DATA.projects.find(
+        project => project.id === id
+      );
+    }
+
+
+    function findPost(id) {
+
+      return DATA.posts.find(
+        post => post.id === id
+      );
+    }
+
+
+    /* ============================================================
+       PROJECT DETAIL
+    ============================================================ */
+
+    function renderProjectDetail(project) {
+
+      const detail = $("#detail");
+
+      if (!detail) return;
+
+      detail.innerHTML = `
+
+        <div class="detail-header">
+
+          <div class="wrap">
+
+            <span class="eyebrow" style="color:#DDD6FE;">
+              ${escapeHTML(project.category)}
+            </span>
+
+            <h1>
+              ${escapeHTML(project.title)}
+            </h1>
+
+            <p class="detail-meta">
+              ${escapeHTML(project.client)}
+            </p>
+
+          </div>
+
         </div>
 
-      </div>
-    </main>
-  `;
+        <div class="wrap">
 
-  showDetail();
-}
+          <div class="detail-body">
 
-function renderPostDetail(post) {
-  $("#detail").innerHTML = `
-    <main class="detail">
-      <div class="wrap article">
+            <a class="back-link" href="#projects">
+              ← Back to projects
+            </a>
 
-        <a class="back" href="#blog">
-          ← Back to blog
-        </a>
+            <p>
+              ${escapeHTML(project.summary)}
+            </p>
 
-        <div class="post-head">
+            <h2>The challenge</h2>
 
-          <div class="post-meta">
-            <span>${escapeHTML(post.date)}</span>
-            <span class="badge ${post.type === "Article" ? "article" : ""}">
+            <p>
+              ${escapeHTML(project.problem)}
+            </p>
+
+            <h2>The approach</h2>
+
+            <p>
+              ${escapeHTML(project.approach)}
+            </p>
+
+            <h2>The result</h2>
+
+            <p>
+              ${escapeHTML(project.outcome)}
+            </p>
+
+            <h2>Focus areas</h2>
+
+            <ul>
+              ${project.tags
+                .map(tag => `
+                  <li>
+                    ${escapeHTML(tag)}
+                  </li>
+                `)
+                .join("")
+              }
+            </ul>
+
+          </div>
+
+        </div>
+      `;
+    }
+
+
+    /* ============================================================
+       POST DETAIL
+    ============================================================ */
+
+    function renderPostDetail(post) {
+
+      const detail = $("#detail");
+
+      if (!detail) return;
+
+      detail.innerHTML = `
+
+        <div class="detail-header">
+
+          <div class="wrap">
+
+            <span class="eyebrow" style="color:#DDD6FE;">
               ${escapeHTML(post.type)}
             </span>
-            <span>${escapeHTML(post.category)}</span>
+
+            <h1>
+              ${escapeHTML(post.title)}
+            </h1>
+
+            <p class="detail-meta">
+              ${escapeHTML(post.date)}
+              ·
+              ${escapeHTML(post.category)}
+            </p>
+
           </div>
 
-          <h1>${escapeHTML(post.title)}</h1>
-
-          <p class="detail-summary">
-            ${escapeHTML(post.excerpt)}
-          </p>
         </div>
 
-        <article class="prose">
-          ${post.body}
-        </article>
+        <div class="wrap">
 
-        <div class="detail-cta">
-          <h2>Enjoyed this?</h2>
-          <p>
-            If you are working on your own brand message, let's talk about
-            how strategy and clearer communication can help.
-          </p>
+          <div class="detail-body">
 
-          <a class="btn btn-grey" href="#contact">
-            Get in touch
-          </a>
+            <a class="back-link" href="#blog">
+              ← Back to writing
+            </a>
+
+            ${post.body}
+
+          </div>
+
+        </div>
+      `;
+    }
+
+
+    /* ============================================================
+       NOT FOUND
+    ============================================================ */
+
+    function renderNotFound() {
+
+      const detail = $("#detail");
+
+      if (!detail) return;
+
+      detail.innerHTML = `
+
+        <div class="detail-header">
+
+          <div class="wrap">
+
+            <span class="eyebrow" style="color:#DDD6FE;">
+              Page not found
+            </span>
+
+            <h1>
+              This page does not exist.
+            </h1>
+
+          </div>
+
         </div>
 
-      </div>
-    </main>
-  `;
+        <div class="wrap">
 
-  showDetail();
-}
+          <div class="detail-body">
 
-function renderNotFound() {
-  $("#detail").innerHTML = `
-    <main class="detail">
-      <div class="wrap narrow">
-        <a class="back" href="#top">← Back home</a>
+            <a class="back-link" href="#home">
+              ← Return home
+            </a>
 
-        <h1>Page not found</h1>
+            <p>
+              The page you are looking for could not be found.
+            </p>
 
-        <p class="detail-summary">
-          The page you're looking for doesn't exist or may have moved.
-        </p>
+          </div>
 
-        <a class="btn btn-ink" href="#top">
-          Return home
-        </a>
-      </div>
-    </main>
-  `;
-
-  showDetail();
-}
-
-
-/* ============================================================
-   VIEW SWITCHING
-   ============================================================ */
-
-function showHome() {
-  $("#home").hidden = false;
-  $("#detail").hidden = true;
-
-  document.title =
-    "Victory Echi | Marketing & Brand Communications Strategist";
-}
-
-function showDetail() {
-  $("#home").hidden = true;
-  $("#detail").hidden = false;
-
-  scrollToTop();
-}
-
-function handleRoute() {
-  const route = getRoute();
-
-  if (route.type === "home" || route.type === "") {
-    showHome();
-    return;
-  }
-
-  if (route.type === "project") {
-    const project = findProject(route.id);
-
-    if (project) {
-      document.title =
-        `${project.title} | Victory Echi`;
-
-      renderProjectDetail(project);
-    } else {
-      renderNotFound();
+        </div>
+      `;
     }
 
-    return;
-  }
 
-  if (route.type === "post") {
-    const post = findPost(route.id);
+    /* ============================================================
+       SHOW HOME
+    ============================================================ */
 
-    if (post) {
+    function showHome() {
+
+      const home = $("#home");
+      const detail = $("#detail");
+
+      if (home) {
+        home.hidden = false;
+      }
+
+      if (detail) {
+        detail.hidden = true;
+      }
+
       document.title =
-        `${post.title} | Victory Echi`;
-
-      renderPostDetail(post);
-    } else {
-      renderNotFound();
+        "Victory Echi | Marketing & Brand Communications Strategist";
     }
 
-    return;
-  }
 
-  renderNotFound();
-}
+    /* ============================================================
+       SHOW DETAIL
+    ============================================================ */
 
-window.addEventListener("hashchange", handleRoute);
+    function showDetail(contentType, item) {
+
+      const home = $("#home");
+      const detail = $("#detail");
+
+      if (!detail) return;
+
+      if (home) {
+        home.hidden = true;
+      }
+
+      detail.hidden = false;
+
+      if (contentType === "project") {
+        renderProjectDetail(item);
+
+        document.title =
+          `${item.title} | Victory Echi`;
+      }
+
+      if (contentType === "post") {
+        renderPostDetail(item);
+
+        document.title =
+          `${item.title} | Victory Echi`;
+      }
+
+      scrollToTop();
+    }
 
 
-/* ============================================================
-   INITIALISE
-   ============================================================ */
+    /* ============================================================
+       HANDLE ROUTE
+    ============================================================ */
 
-function init() {
-  renderHero();
-  renderAbout();
+    function handleRoute() {
 
-  renderProjectFilters();
-  renderProjects();
+      const route = getRoute();
 
-  renderPostFilters();
-  renderPosts();
+      if (route.type === "home") {
 
-  renderSkills();
-  renderEducation();
-  renderContact();
-  renderFooter();
+        showHome();
 
-  initNavigation();
-  initRewrite();
+        return;
+      }
 
-  handleRoute();
-}
+      if (route.type === "project") {
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", init);
-} else {
-  init();
-}
-</script>
+        const project =
+          findProject(route.id);
+
+        if (project) {
+
+          showDetail(
+            "project",
+            project
+          );
+
+        } else {
+
+          renderNotFound();
+
+          $("#home").hidden = true;
+          $("#detail").hidden = false;
+
+          document.title =
+            "Page Not Found | Victory Echi";
+
+          scrollToTop();
+        }
+
+        return;
+      }
+
+      if (route.type === "post") {
+
+        const post =
+          findPost(route.id);
+
+        if (post) {
+
+          showDetail(
+            "post",
+            post
+          );
+
+        } else {
+
+          renderNotFound();
+
+          $("#home").hidden = true;
+          $("#detail").hidden = false;
+
+          document.title =
+            "Page Not Found | Victory Echi";
+
+          scrollToTop();
+        }
+
+        return;
+      }
+
+      renderNotFound();
+
+      $("#home").hidden = true;
+      $("#detail").hidden = false;
+
+      document.title =
+        "Page Not Found | Victory Echi";
+
+      scrollToTop();
+    }
+
+
+    /* ============================================================
+       INITIALISE
+    ============================================================ */
+
+    function init() {
+
+      renderHero();
+
+      renderAbout();
+
+      renderProjectFilters();
+      renderProjects();
+
+      renderPostFilters();
+      renderPosts();
+
+      renderSkills();
+
+      renderEducation();
+
+      renderContact();
+
+      initRewrite();
+
+      initNavigation();
+
+      handleRoute();
+    }
+
+
+    /* ============================================================
+       EVENTS
+    ============================================================ */
+
+    window.addEventListener(
+      "hashchange",
+      handleRoute
+    );
+
+    if (document.readyState === "loading") {
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        init
+      );
+
+    } else {
+
+      init();
+    }
+
+  </script>
+
 </body>
 </html>
