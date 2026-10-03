@@ -1,0 +1,28 @@
+{
+  "title": "Sample: Launch email sequence for a coaching program",
+  "client": "Sample client",
+  "role": "Messaging strategist and copywriter",
+  "date": "2026-06-15",
+  "tags": ["Email", "Launch"],
+  "featured": true,
+  "cover": "",
+  "summary": "This is a sample entry that shows every part of a project page. Delete it from the dashboard when you add your first real project.",
+  "challenge": "The offer was strong, but the launch emails described the program in general terms. Subscribers opened them and did not know what to do next.\n\nThe goal was a clear message that made the next step obvious.",
+  "approach": "I started with three questions:\n\n- Who is this for, in one sentence?\n- What changes for them in the first month?\n- What is the single action we want after each email?\n\nThen I rewrote the sequence around one idea per email, with a story at the center of each.",
+  "results": [
+    { "value": "00%", "label": "Replace with a real result" },
+    { "value": "0x", "label": "Replace with another result" },
+    { "value": "0", "label": "Replace with a third result" }
+  ],
+  "before": "Join our transformational program and unlock your full potential.",
+  "after": "In six weeks, you will run team meetings that end with clear decisions. Spots open Monday.",
+  "samples": [
+    { "caption": "Email 1: the story opener", "image": "", "text": "Subject: The meeting that ran 90 minutes and decided nothing\n\nLast month, a client told me about a meeting she still thinks about..." }
+  ],
+  "testimonial": {
+    "quote": "Replace this with a real quote from a real client.",
+    "name": "Client name",
+    "role": "Client role, company",
+    "photo": ""
+  }
+}

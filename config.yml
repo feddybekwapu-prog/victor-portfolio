@@ -1,0 +1,151 @@
+backend:
+  name: github
+  repo: feddybekwapu-prog/victor-portfolio
+  branch: main
+
+site_url: https://feddybekwapu-prog.github.io/victor-portfolio/
+display_url: https://feddybekwapu-prog.github.io/victor-portfolio/
+publish_mode: simple
+locale: en
+
+media_folder: assets/uploads
+public_folder: assets/uploads
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: content/projects
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: [title, date]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Client or brand, name: client, widget: string, required: false }
+      - { label: My role, name: role, widget: string, required: false }
+      - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Tags, name: tags, widget: list, required: false, hint: "Short labels like Email, Funnel, Brand story. They become filter buttons." }
+      - { label: Featured, name: featured, widget: boolean, default: false, required: false, hint: "Featured projects appear first and larger." }
+      - { label: Cover image, name: cover, widget: image, required: false }
+      - { label: One-line summary, name: summary, widget: text, required: false }
+      - { label: The challenge, name: challenge, widget: markdown, required: false }
+      - { label: The approach, name: approach, widget: markdown, required: false }
+      - label: Results
+        name: results
+        widget: list
+        required: false
+        summary: "{{fields.value}} {{fields.label}}"
+        fields:
+          - { label: Number, name: value, widget: string, hint: "For example 42% or 3x" }
+          - { label: What it means, name: label, widget: string, hint: "For example increase in booked calls" }
+      - { label: Message before, name: before, widget: text, required: false }
+      - { label: Message after, name: after, widget: text, required: false }
+      - label: Samples
+        name: samples
+        widget: list
+        required: false
+        summary: "{{fields.caption}}"
+        fields:
+          - { label: Caption, name: caption, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Text (copy or email), name: text, widget: text, required: false }
+      - label: Client testimonial
+        name: testimonial
+        widget: object
+        required: false
+        fields:
+          - { label: Quote, name: quote, widget: text, required: false }
+          - { label: Name, name: name, widget: string, required: false }
+          - { label: Role and company, name: role, widget: string, required: false }
+          - { label: Photo, name: photo, widget: image, required: false }
+
+  - name: posts
+    label: Blog posts
+    label_singular: Blog post
+    folder: content/posts
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
+    sortable_fields: [title, date]
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Type, name: type, widget: select, options: ["Quick take", "Article"], default: "Quick take" }
+      - { label: Tags, name: tags, widget: list, required: false }
+      - { label: Cover image, name: cover, widget: image, required: false }
+      - { label: Short excerpt, name: excerpt, widget: text, required: false, hint: "Shown in the blog list." }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: site
+    label: Site settings
+    files:
+      - name: settings
+        label: Name, intro, contact
+        file: content/settings.json
+        format: json
+        fields:
+          - { label: Full name, name: name, widget: string }
+          - { label: Professional title, name: title, widget: string }
+          - { label: Short intro, name: intro, widget: text }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Main button text, name: primary_cta, widget: string }
+              - { label: Second button text, name: secondary_cta, widget: string }
+              - { label: Message before, name: before, widget: text, hint: "A vague message, shown crossed out." }
+              - { label: Message after, name: after, widget: text, hint: "The clear rewrite." }
+              - { label: Caption, name: caption, widget: string }
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - { label: Photo, name: photo, widget: image, required: false }
+              - { label: About text, name: body, widget: markdown }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Short text, name: text, widget: text, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: LinkedIn link, name: linkedin, widget: string, required: false }
+              - { label: WhatsApp number, name: whatsapp, widget: string, required: false, hint: "Country code first, numbers only. Example 2348012345678" }
+              - { label: WhatsApp starter message, name: whatsapp_message, widget: string, required: false }
+          - { label: Footer note, name: footer_note, widget: string, required: false }
+
+      - name: skills
+        label: Skills
+        file: content/skills.json
+        format: json
+        fields:
+          - label: Skill groups
+            name: groups
+            widget: list
+            summary: "{{fields.category}}"
+            fields:
+              - { label: Group name, name: category, widget: string }
+              - { label: Skills, name: items, widget: list }
+
+      - name: education
+        label: Education
+        file: content/education.json
+        format: json
+        fields:
+          - label: Education entries
+            name: entries
+            widget: list
+            summary: "{{fields.qualification}}"
+            fields:
+              - { label: Qualification, name: qualification, widget: string }
+              - { label: School or institution, name: school, widget: string }
+              - { label: Period, name: period, widget: string, required: false }
+              - { label: Notes, name: details, widget: string, required: false }

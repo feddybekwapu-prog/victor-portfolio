@@ -1,0 +1,8 @@
+{
+  "groups": [
+    { "category": "Messaging and positioning", "items": ["Brand messaging", "Offer clarity", "Value propositions", "Audience research"] },
+    { "category": "Storytelling", "items": ["Brand narrative", "Founder stories", "Case study writing", "Sales page copy"] },
+    { "category": "Content and campaigns", "items": ["Email sequences", "Launch campaigns", "Social content", "Funnel copy"] },
+    { "category": "Strategy", "items": ["Brand communications", "Go-to-market messaging", "Content planning"] }
+  ]
+}
