@@ -1,0 +1,973 @@
+<script>
+/* ============================================================
+   VICTORY ECHI — PORTFOLIO SITE
+   ============================================================ */
+
+const DATA = {
+  hero: {
+    name: "Victory Echi",
+    title: "Marketing & Brand Communications Strategist",
+    headline: "Marketing messages customers actually listen to.",
+    intro:
+      "I help founders, coaches, and growing brands turn unclear ideas into sharp messaging that makes the right people pay attention.",
+    cta1: "See the proof",
+    cta2: "Work with me",
+
+    before:
+      "We help businesses leverage strategic solutions to achieve their goals.",
+    after:
+      "Turn your expertise into a message your best customers understand.",
+    caption: "Same offer. Clearer message."
+  },
+
+  about: {
+    initials: "VE",
+    body: `
+      <p>
+        I’m Victory Echi, a marketing and brand communications strategist
+        focused on helping businesses communicate what they do clearly,
+        confidently, and persuasively.
+      </p>
+
+      <p>
+        Good marketing is not simply about saying more. It is about finding
+        the right message, for the right audience, at the right moment.
+      </p>
+
+      <p>
+        My work sits at the intersection of <strong>strategy, messaging,
+        storytelling, and brand communication</strong>. I work with founders,
+        coaches, consultants, and businesses that have something valuable to
+        offer but need a clearer way to communicate that value.
+      </p>
+
+      <h3>My approach</h3>
+
+      <p>
+        I start with the audience, the offer, and the problem the business
+        actually solves. From there, I simplify the message, strengthen the
+        positioning, and turn strategy into communication people can
+        understand and act on.
+      </p>
+
+      <blockquote>
+        Clarity is not about making a message smaller. It is about making the
+        important part impossible to miss.
+      </blockquote>
+    `
+  },
+
+  projects: [
+    {
+      id: "brand-positioning",
+      title: "Brand Positioning & Messaging",
+      client: "Founder-led service business",
+      category: "Strategy",
+      featured: true,
+      cover: "BP",
+      summary:
+        "Clarified the brand's positioning and transformed a broad service description into a focused customer-facing message.",
+      challenge:
+        "The business offered several valuable services, but the existing messaging made it difficult for potential customers to understand the primary value proposition.",
+      solution:
+        "I distilled the offer into a clear positioning statement, refined the core audience, and developed a messaging framework that could be reused across the website and marketing channels.",
+      result:
+        "A clearer communication system that made the offer easier to understand and gave the brand a consistent foundation for future marketing.",
+      tags: ["Positioning", "Messaging", "Strategy"]
+    },
+
+    {
+      id: "coach-messaging",
+      title: "Coach Offer Messaging",
+      client: "Personal development coach",
+      category: "Messaging",
+      featured: false,
+      cover: "CM",
+      summary:
+        "Reworked a coaching offer so prospective clients could immediately understand the problem, transformation, and value.",
+      challenge:
+        "The original copy focused heavily on the coach's process rather than the client's desired outcome.",
+      solution:
+        "Reframed the messaging around the client's problem, desired transformation, objections, and reasons to believe.",
+      result:
+        "A more customer-centred offer narrative that could be adapted for landing pages, social content, and sales conversations.",
+      tags: ["Copywriting", "Offer", "Storytelling"]
+    },
+
+    {
+      id: "campaign-copy",
+      title: "Campaign Copy Development",
+      client: "Digital campaign",
+      category: "Copywriting",
+      featured: false,
+      cover: "CC",
+      summary:
+        "Developed campaign messaging designed to move an audience from awareness to interest and action.",
+      challenge:
+        "The campaign had strong information but lacked a clear narrative connecting the audience's problem to the proposed solution.",
+      solution:
+        "Built a message sequence around attention, problem awareness, value, proof, objections, and action.",
+      result:
+        "A coherent campaign communication structure that could be used across multiple touchpoints.",
+      tags: ["Campaigns", "Copywriting", "Conversion"]
+    },
+
+    {
+      id: "content-strategy",
+      title: "Content Strategy Framework",
+      client: "Thought-leadership brand",
+      category: "Content",
+      featured: false,
+      cover: "CS",
+      summary:
+        "Created a practical content framework for turning expertise into consistent, useful brand communication.",
+      challenge:
+        "The brand had plenty of expertise but no repeatable system for deciding what to communicate.",
+      solution:
+        "Organised content around audience problems, core themes, proof, education, and brand perspective.",
+      result:
+        "A repeatable content structure that reduced guesswork and created stronger alignment between content and positioning.",
+      tags: ["Content", "Strategy", "Thought Leadership"]
+    }
+  ],
+
+  posts: [
+    {
+      id: "clarity-in-marketing",
+      title: "Why clarity matters more than cleverness in marketing",
+      date: "October 2026",
+      type: "Article",
+      category: "Messaging",
+      excerpt:
+        "A clever message may sound impressive. A clear message helps people understand what you can actually do for them.",
+      body: `
+        <p>
+          One of the easiest mistakes in marketing is trying to sound
+          impressive before trying to sound clear.
+        </p>
+
+        <p>
+          Businesses often describe themselves using sophisticated language,
+          broad promises, and industry terminology. The result can sound
+          professional while leaving the audience unsure about what is being
+          offered.
+        </p>
+
+        <h3>Start with the problem</h3>
+
+        <p>
+          A stronger message usually begins with the audience's situation.
+          What problem are they experiencing? What are they trying to achieve?
+          What makes the problem important now?
+        </p>
+
+        <p>
+          Once those questions are clear, the offer has something meaningful
+          to connect to.
+        </p>
+
+        <h3>Make the value easy to recognise</h3>
+
+        <p>
+          Clarity does not mean removing personality. It means making sure
+          personality supports understanding rather than competing with it.
+        </p>
+
+        <blockquote>
+          If people have to decode your message before they can understand
+          your offer, your marketing is doing unnecessary work.
+        </blockquote>
+
+        <p>
+          The goal is simple: make the right person recognise the relevance of
+          your offer quickly.
+        </p>
+      `
+    },
+
+    {
+      id: "brand-story",
+      title: "Your brand story is not your biography",
+      date: "September 2026",
+      type: "Article",
+      category: "Brand",
+      excerpt:
+        "A useful brand story connects your experience to the reason your audience should care.",
+      body: `
+        <p>
+          Your experience matters, but your brand story should not require
+          customers to read your entire biography before understanding its
+          relevance.
+        </p>
+
+        <p>
+          The strongest brand stories create a connection between where you
+          have been, what you have learned, and how that experience helps the
+          people you serve.
+        </p>
+
+        <h3>Experience becomes valuable when it creates relevance</h3>
+
+        <p>
+          Instead of simply listing achievements, connect them to a problem
+          your audience recognises.
+        </p>
+
+        <p>
+          That shift changes the story from “Here is everything about me” to
+          “Here is why my experience matters to you.”
+        </p>
+      `
+    },
+
+    {
+      id: "better-content",
+      title: "A simple framework for better content",
+      date: "August 2026",
+      type: "Quick Take",
+      category: "Content",
+      excerpt:
+        "Before publishing another post, make sure you know what your audience should understand, feel, or do.",
+      body: `
+        <p>
+          Before creating content, identify one useful outcome for the reader.
+        </p>
+
+        <ul>
+          <li><strong>Understand:</strong> teach them something useful.</li>
+          <li><strong>Feel:</strong> create recognition or emotional relevance.</li>
+          <li><strong>Believe:</strong> strengthen a useful perspective.</li>
+          <li><strong>Do:</strong> give them a practical next step.</li>
+        </ul>
+
+        <p>
+          A content strategy becomes easier when every piece has a job.
+        </p>
+      `
+    }
+  ],
+
+  skills: [
+    {
+      title: "Strategy",
+      items: [
+        "Brand Strategy",
+        "Positioning",
+        "Messaging Strategy",
+        "Audience Research",
+        "Campaign Strategy"
+      ]
+    },
+    {
+      title: "Communication",
+      items: [
+        "Brand Messaging",
+        "Copywriting",
+        "Storytelling",
+        "Content Strategy",
+        "Thought Leadership"
+      ]
+    },
+    {
+      title: "Content",
+      items: [
+        "Website Copy",
+        "Social Content",
+        "Long-form Writing",
+        "Campaign Copy",
+        "Editorial Planning"
+      ]
+    },
+    {
+      title: "Working Style",
+      items: [
+        "Research-led",
+        "Customer-focused",
+        "Collaborative",
+        "Strategic",
+        "Detail-oriented"
+      ]
+    }
+  ],
+
+  education: [
+    {
+      title: "Marketing & Brand Communications",
+      when: "Professional Development",
+      text:
+        "Continued development across marketing strategy, communication, branding, copywriting, and audience psychology."
+    },
+    {
+      title: "Communication & Writing",
+      when: "Ongoing Practice",
+      text:
+        "Developing practical expertise through research, writing, strategic projects, and analysis of effective brand communication."
+    },
+    {
+      title: "Independent Projects",
+      when: "Ongoing",
+      text:
+        "Applying marketing and communication principles through real-world projects, case studies, and portfolio work."
+    }
+  ],
+
+  contact: {
+    heading: "Let's talk",
+    text:
+      "Have an offer that is good but difficult to explain? Let's work on the message.",
+    links: [
+      {
+        label: "Email",
+        value: "victory@example.com",
+        href: "mailto:victory@example.com"
+      },
+      {
+        label: "LinkedIn",
+        value: "Connect professionally",
+        href: "https://www.linkedin.com/"
+      },
+      {
+        label: "Instagram",
+        value: "Follow the work",
+        href: "https://www.instagram.com/"
+      }
+    ]
+  }
+};
+
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+
+const $ = (selector, parent = document) =>
+  parent.querySelector(selector);
+
+const $$ = (selector, parent = document) =>
+  [...parent.querySelectorAll(selector)];
+
+function escapeHTML(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+function renderHero() {
+  $("#hero-name").textContent = DATA.hero.name;
+  $("#hero-title").textContent = DATA.hero.title;
+  $("#hero-headline").textContent = DATA.hero.headline;
+  $("#hero-intro").textContent = DATA.hero.intro;
+
+  $("#hero-cta1").textContent = DATA.hero.cta1;
+  $("#hero-cta2").textContent = DATA.hero.cta2;
+
+  $("#rw-before").textContent = DATA.hero.before;
+  $("#rw-after").textContent = DATA.hero.after;
+  $("#rw-caption").textContent = DATA.hero.caption;
+}
+
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+
+function renderAbout() {
+  $("#about-body").innerHTML = DATA.about.body;
+
+  $("#portrait").innerHTML = `
+    <div class="mono" aria-label="${escapeHTML(DATA.about.initials)}">
+      ${escapeHTML(DATA.about.initials)}
+    </div>
+  `;
+}
+
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+
+let activeProjectFilter = "All";
+
+function projectCategories() {
+  return [
+    "All",
+    ...new Set(DATA.projects.map(project => project.category))
+  ];
+}
+
+function renderProjectFilters() {
+  const container = $("#project-filters");
+
+  container.innerHTML = projectCategories()
+    .map(category => `
+      <button
+        class="filter"
+        type="button"
+        data-project-filter="${escapeHTML(category)}"
+        aria-pressed="${category === activeProjectFilter}"
+      >
+        ${escapeHTML(category)}
+      </button>
+    `)
+    .join("");
+
+  $$("[data-project-filter]", container).forEach(button => {
+    button.addEventListener("click", () => {
+      activeProjectFilter = button.dataset.projectFilter;
+      renderProjectFilters();
+      renderProjects();
+    });
+  });
+}
+
+function renderProjects() {
+  const container = $("#project-grid");
+
+  let projects = DATA.projects;
+
+  if (activeProjectFilter !== "All") {
+    projects = projects.filter(
+      project => project.category === activeProjectFilter
+    );
+  }
+
+  if (!projects.length) {
+    container.innerHTML =
+      `<p class="empty">No projects found in this category.</p>`;
+    return;
+  }
+
+  container.innerHTML = projects
+    .map(project => `
+      <article class="pcard ${project.featured ? "is-featured" : ""}">
+        <div class="pcard-cover" aria-hidden="true">
+          <span class="cover-mark">${escapeHTML(project.cover)}</span>
+        </div>
+
+        <div class="pcard-body">
+          <p class="pcard-client">${escapeHTML(project.client)}</p>
+
+          <h3>
+            <a href="#project/${encodeURIComponent(project.id)}">
+              ${escapeHTML(project.title)}
+            </a>
+          </h3>
+
+          <p>${escapeHTML(project.summary)}</p>
+
+          <ul class="chips">
+            ${project.tags.map(tag => `
+              <li class="chip">${escapeHTML(tag)}</li>
+            `).join("")}
+          </ul>
+        </div>
+      </article>
+    `)
+    .join("");
+}
+
+
+/* ============================================================
+   BLOG
+   ============================================================ */
+
+let activePostFilter = "All";
+
+function postCategories() {
+  return [
+    "All",
+    ...new Set(DATA.posts.map(post => post.category))
+  ];
+}
+
+function renderPostFilters() {
+  const container = $("#post-filters");
+
+  container.innerHTML = postCategories()
+    .map(category => `
+      <button
+        class="filter"
+        type="button"
+        data-post-filter="${escapeHTML(category)}"
+        aria-pressed="${category === activePostFilter}"
+      >
+        ${escapeHTML(category)}
+      </button>
+    `)
+    .join("");
+
+  $$("[data-post-filter]", container).forEach(button => {
+    button.addEventListener("click", () => {
+      activePostFilter = button.dataset.postFilter;
+      renderPostFilters();
+      renderPosts();
+    });
+  });
+}
+
+function renderPosts() {
+  const container = $("#post-list");
+
+  let posts = DATA.posts;
+
+  if (activePostFilter !== "All") {
+    posts = posts.filter(
+      post => post.category === activePostFilter
+    );
+  }
+
+  if (!posts.length) {
+    container.innerHTML =
+      `<li class="post-row"><p class="empty">No posts found.</p></li>`;
+    return;
+  }
+
+  container.innerHTML = posts
+    .map(post => `
+      <li class="post-row">
+        <div class="post-meta">
+          <span>${escapeHTML(post.date)}</span>
+          <span class="badge ${post.type === "Article" ? "article" : ""}">
+            ${escapeHTML(post.type)}
+          </span>
+        </div>
+
+        <div>
+          <h3>
+            <a href="#post/${encodeURIComponent(post.id)}">
+              ${escapeHTML(post.title)}
+            </a>
+          </h3>
+
+          <p>${escapeHTML(post.excerpt)}</p>
+        </div>
+      </li>
+    `)
+    .join("");
+}
+
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+
+function renderSkills() {
+  $("#skill-groups").innerHTML = DATA.skills
+    .map(group => `
+      <div>
+        <h3>${escapeHTML(group.title)}</h3>
+
+        <ul>
+          ${group.items
+            .map(skill => `<li>${escapeHTML(skill)}</li>`)
+            .join("")}
+        </ul>
+      </div>
+    `)
+    .join("");
+}
+
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+
+function renderEducation() {
+  $("#edu-list").innerHTML = DATA.education
+    .map(item => `
+      <li>
+        <h3>${escapeHTML(item.title)}</h3>
+        <p class="when">${escapeHTML(item.when)}</p>
+        <p>${escapeHTML(item.text)}</p>
+      </li>
+    `)
+    .join("");
+}
+
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+function renderContact() {
+  $("#contact-heading").textContent = DATA.contact.heading;
+  $("#contact-text").textContent = DATA.contact.text;
+
+  $("#contact-links").innerHTML = DATA.contact.links
+    .map(link => `
+      <a
+        class="contact-link"
+        href="${escapeHTML(link.href)}"
+        ${link.href.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}
+      >
+        <strong>${escapeHTML(link.label)}</strong>
+        <span>${escapeHTML(link.value)}</span>
+      </a>
+    `)
+    .join("");
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+function renderFooter() {
+  $("#footer-text").textContent =
+    `© ${new Date().getFullYear()} ${DATA.hero.name}. All rights reserved.`;
+}
+
+
+/* ============================================================
+   REWRITE ANIMATION
+   ============================================================ */
+
+function replayRewrite() {
+  const box = $(".rewrite");
+
+  box.classList.remove("armed", "go");
+
+  /*
+   * Force the browser to recognise the reset before restarting
+   * the animation.
+   */
+  void box.offsetWidth;
+
+  box.classList.add("armed");
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      box.classList.add("go");
+    });
+  });
+}
+
+function initRewrite() {
+  $("#rw-replay").addEventListener("click", replayRewrite);
+
+  /*
+   * Start once when the page loads.
+   */
+  setTimeout(replayRewrite, 400);
+}
+
+
+/* ============================================================
+   MOBILE NAVIGATION
+   ============================================================ */
+
+function initNavigation() {
+  const toggle = $(".nav-toggle");
+  const nav = $("#nav");
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+
+    toggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
+    toggle.textContent = isOpen ? "Close" : "Menu";
+  });
+
+  $$("#nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+
+      toggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      toggle.textContent = "Menu";
+    });
+  });
+}
+
+
+/* ============================================================
+   DETAIL PAGE ROUTING
+   ============================================================ */
+
+function getRoute() {
+  const hash = window.location.hash.replace(/^#/, "");
+
+  if (!hash) {
+    return {
+      type: "home",
+      id: null
+    };
+  }
+
+  const [type, ...rest] = hash.split("/");
+
+  return {
+    type,
+    id: decodeURIComponent(rest.join("/"))
+  };
+}
+
+function findProject(id) {
+  return DATA.projects.find(project => project.id === id);
+}
+
+function findPost(id) {
+  return DATA.posts.find(post => post.id === id);
+}
+
+
+/* ============================================================
+   DETAIL VIEWS
+   ============================================================ */
+
+function renderProjectDetail(project) {
+  $("#detail").innerHTML = `
+    <main class="detail">
+      <div class="wrap">
+
+        <a class="back" href="#projects">
+          ← Back to projects
+        </a>
+
+        <div class="post-head">
+          <p class="post-meta">
+            <span>${escapeHTML(project.client)}</span>
+            <span class="badge">${escapeHTML(project.category)}</span>
+          </p>
+
+          <h1>${escapeHTML(project.title)}</h1>
+
+          <p class="detail-summary">
+            ${escapeHTML(project.summary)}
+          </p>
+        </div>
+
+        <figure class="detail-cover">
+          <div class="pcard-cover" style="
+            aspect-ratio:16/8;
+            border:2px solid var(--ink);
+            border-radius:22px;
+          ">
+            <span class="cover-mark">
+              ${escapeHTML(project.cover)}
+            </span>
+          </div>
+        </figure>
+
+        <section class="d-section">
+          <h2>The challenge</h2>
+          <p>${escapeHTML(project.challenge)}</p>
+        </section>
+
+        <section class="d-section">
+          <h2>The approach</h2>
+          <p>${escapeHTML(project.solution)}</p>
+        </section>
+
+        <section class="d-section">
+          <h2>Outcome</h2>
+          <p>${escapeHTML(project.result)}</p>
+        </section>
+
+        <div class="detail-cta">
+          <h2>Have a messaging challenge?</h2>
+          <p>
+            Let's discuss the offer, audience, and message you want to
+            strengthen.
+          </p>
+          <a class="btn btn-grey" href="#contact">
+            Start a conversation
+          </a>
+        </div>
+
+      </div>
+    </main>
+  `;
+
+  showDetail();
+}
+
+function renderPostDetail(post) {
+  $("#detail").innerHTML = `
+    <main class="detail">
+      <div class="wrap article">
+
+        <a class="back" href="#blog">
+          ← Back to blog
+        </a>
+
+        <div class="post-head">
+
+          <div class="post-meta">
+            <span>${escapeHTML(post.date)}</span>
+            <span class="badge ${post.type === "Article" ? "article" : ""}">
+              ${escapeHTML(post.type)}
+            </span>
+            <span>${escapeHTML(post.category)}</span>
+          </div>
+
+          <h1>${escapeHTML(post.title)}</h1>
+
+          <p class="detail-summary">
+            ${escapeHTML(post.excerpt)}
+          </p>
+        </div>
+
+        <article class="prose">
+          ${post.body}
+        </article>
+
+        <div class="detail-cta">
+          <h2>Enjoyed this?</h2>
+          <p>
+            If you are working on your own brand message, let's talk about
+            how strategy and clearer communication can help.
+          </p>
+
+          <a class="btn btn-grey" href="#contact">
+            Get in touch
+          </a>
+        </div>
+
+      </div>
+    </main>
+  `;
+
+  showDetail();
+}
+
+function renderNotFound() {
+  $("#detail").innerHTML = `
+    <main class="detail">
+      <div class="wrap narrow">
+        <a class="back" href="#top">← Back home</a>
+
+        <h1>Page not found</h1>
+
+        <p class="detail-summary">
+          The page you're looking for doesn't exist or may have moved.
+        </p>
+
+        <a class="btn btn-ink" href="#top">
+          Return home
+        </a>
+      </div>
+    </main>
+  `;
+
+  showDetail();
+}
+
+
+/* ============================================================
+   VIEW SWITCHING
+   ============================================================ */
+
+function showHome() {
+  $("#home").hidden = false;
+  $("#detail").hidden = true;
+
+  document.title =
+    "Victory Echi | Marketing & Brand Communications Strategist";
+}
+
+function showDetail() {
+  $("#home").hidden = true;
+  $("#detail").hidden = false;
+
+  scrollToTop();
+}
+
+function handleRoute() {
+  const route = getRoute();
+
+  if (route.type === "home" || route.type === "") {
+    showHome();
+    return;
+  }
+
+  if (route.type === "project") {
+    const project = findProject(route.id);
+
+    if (project) {
+      document.title =
+        `${project.title} | Victory Echi`;
+
+      renderProjectDetail(project);
+    } else {
+      renderNotFound();
+    }
+
+    return;
+  }
+
+  if (route.type === "post") {
+    const post = findPost(route.id);
+
+    if (post) {
+      document.title =
+        `${post.title} | Victory Echi`;
+
+      renderPostDetail(post);
+    } else {
+      renderNotFound();
+    }
+
+    return;
+  }
+
+  renderNotFound();
+}
+
+window.addEventListener("hashchange", handleRoute);
+
+
+/* ============================================================
+   INITIALISE
+   ============================================================ */
+
+function init() {
+  renderHero();
+  renderAbout();
+
+  renderProjectFilters();
+  renderProjects();
+
+  renderPostFilters();
+  renderPosts();
+
+  renderSkills();
+  renderEducation();
+  renderContact();
+  renderFooter();
+
+  initNavigation();
+  initRewrite();
+
+  handleRoute();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
+</script>
+</body>
+</html>
